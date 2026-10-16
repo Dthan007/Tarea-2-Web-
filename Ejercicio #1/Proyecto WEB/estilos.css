@@ -1,0 +1,295 @@
+* {
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+section {
+    scroll-margin-top: 80px; /* altura del header */
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: #c0c0c0;
+    margin: 20px 0;
+}
+
+.head {
+    padding: 15px 40px;
+}
+
+
+header {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.header-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.nombre {
+    width: 300px;
+    height: auto;
+}
+
+.pequeno {
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+nav {
+    background: rgba(168, 168, 168, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 18px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-shadow:
+        0 0 5px #919191,
+        0 0 15px #494949,
+        0 0 30px #000000;
+}
+
+.contBody {
+    padding: 10%;
+}
+
+.barra-texto p{
+    font-size: 32px;
+    color: #ffffff;
+    background-color: #000000;
+    border-radius: 5px;
+    margin-top: auto;
+    padding-left: 5%;
+    padding-inline-start:  5%;
+    width: 300px;
+}
+
+
+
+.contServicios {
+    color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 5%;
+    width: 600px;
+}
+
+.contServicios > div {
+    padding: 20px;
+    background-color: #d1d0d0;
+    color: #000000;
+}
+
+.contServicios img {
+    width: 100px;
+    height: 100px;
+}
+
+#imagen{
+    width: 300px;
+    height: 200px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+    
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #222;
+    color: white;
+}
+
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.footer-contenido {
+    background: rgba(168, 168, 168, 0.35);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    color: rgb(241, 239, 239);
+}
+
+.footer-contenido p {
+    color: #000000;
+    text-align: center;
+    z-index: 3;
+}
+.estilo{
+    background-color: #000000;
+}
+/* Configuración del Slider */
+.slider {
+    width: 800px;
+    height: 200px;
+    overflow: hidden;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: slider 15s infinite;
+}
+
+.slide {
+    width: 20%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Experimento sin JS usando 5 imagenes */
+@keyframes slider {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    18% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-20%);
+    }
+
+    38% {
+        transform: translateX(-20%);
+    }
+
+    40% {
+        transform: translateX(-40%);
+    }
+
+    58% {
+        transform: translateX(-40%);
+    }
+
+    60% {
+        transform: translateX(-60%);
+    }
+
+    78% {
+        transform: translateX(-60%);
+    }
+
+    80% {
+        transform: translateX(-80%);
+    }
+
+    98% {
+        transform: translateX(-80%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

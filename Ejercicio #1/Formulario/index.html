@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Correo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <form action="https://formsubmit.co/zgmply@gmail.com" method="POST">
+        <h2>Contacto</h2>
+        <div class="entrada">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre">    
+                <p></p>
+            <label for="tele">Teléfono</label>
+            <input type="tel" name="tele" id="tele" placeholder="Teléfono"> 
+                <p></p>
+            <label for="email">Correo</label>
+            <input type="email" name="email" id="email" placeholder="Correo"> 
+                <p></p>
+            <label for="message">Mensaje</label>
+            
+            <textarea name="message" id="mesa" cols="30" rows="5" placeholder="Mensaje"></textarea> 
+        <p></p>
+        <div class="form-txt">
+            <a href="#">Políticas de Privacidad</a>
+            <br>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+        <br>
+        </div>
+        <input class="btn" type="submit" value="Enviar">
+        
+        <input type="hidden" name="_next" value="https://127.0.0.1:5500/Formulario%20Web/index.html">
+        <input type="hidden" name="_captcha" value="false>"
+
+
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Alarmas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class = "Contenedor">
+
+        <div class = "Alarmas Dinamico">
+            <div class="alarmas">
+                <h2>Registro de alarmas</h2>
+
+                <input type="time" id="horaAlarma">
+
+                <select id="formatoAlarma">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+
+                <button onclick="agregarAlarma()">Agregar alarma</button>
+
+                <h3>Mis alarmas</h3>
+
+                <div class="lista-contenedor">
+                    <ul id="listaAlarmas"></ul>
+                </div>
+            </div>
+        </div> 
+
+        <div class="Reloj_Digital">
+            <div id="date">Dia 00 de 00 del 0000.</div>
+            <ul>
+                <li id="hora">00</li>
+                <li>:</li>
+                <li id="minuto">00</li>
+                <li>:</li>
+                <li id="segundo">00</li>
+            </ul>
+            <div id="formato">AM</div>
+        </div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F3FFFE;
+    color: #3B3F46;
+}
+
+.Contenedor {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 35px;
+    padding: 30px;
+}
+
+.Contenedor.Alarmas.Dinamico {
+    width: 500px;
+    max-width: 50%;
+    min-width: 0;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+}
+
+.alarmas {
+    width: 100%;
+    padding: 28px;
+    border: 1px solid #CFEFEB;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(59, 63, 70, 0.08);
+}
+
+.alarmas h2 {
+    margin-bottom: 22px;
+    text-align: center;
+    font-size: 25px;
+    color: #3B3F46;
+}
+
+.alarmas h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CFEFEB;
+    font-size: 17px;
+    color: #3B3F46;
+}
+
+.alarmas input[type="time"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #94D9D5;
+    border-radius: 10px;
+    background: #F3FFFE;
+    color: #3B3F46;
+    font-size: 15px;
+    outline: none;
+}
+
+.alarmas input[type="time"]:focus {
+    border-color: #5FB9B8;
+    box-shadow: 0 0 0 3px #CFEFEB;
+}
+
+.alarmas > button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #5FB9B8;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.alarmas > button:hover {
+    background: #3B3F46;
+}
+
+#listaAlarmas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+}
+
+#listaAlarmas li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    padding: 13px;
+    border: 1px solid #CFEFEB;
+    border-radius: 12px;
+    background: #F3FFFE;
+}
+
+#listaAlarmas li strong {
+    flex: 1;
+    min-width: 75px;
+    font-size: 20px;
+    color: #3B3F46;
+}
+
+#listaAlarmas button {
+    padding: 9px 11px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-editar {
+    background: #CFEFEB;
+    color: #3B3F46;
+}
+
+.btn-editar:hover {
+    background: #94D9D5;
+}
+
+.btn-eliminar {
+    background: #3B3F46;
+    color: #FFFFFF;
+}
+
+.btn-eliminar:hover {
+    background: #5FB9B8;
+}
+
+.btn-estado {
+    background: #5FB9B8;
+    color: #FFFFFF;
+}
+
+.btn-estado:hover {
+    background: #94D9D5;
+    color: #3B3F46;
+}
+
+.Reloj_Digital {
+    flex-shrink: 0;
+    padding: 35px;
+    border: 1px solid #CFEFEB;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(59, 63, 70, 0.08);
+    color: #3B3F46;
+    user-select: none;
+}
+
+#date {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #5FB9B8;
+}
+
+.Reloj_Digital ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    font-size: clamp(35px, 5vw, 65px);
+    font-weight: bold;
+    color: #3B3F46;
+}
+
+.Reloj_Digital ul li {
+    user-select: none;
+}
+
+#formato {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5FB9B8;
+}
+
+@media (max-width: 1000px) {
+    .Contenedor {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .Contenedor.Alarmas.Dinamico {
+        width: 450px;
+        max-width: 55%;
+    }
+
+    .alarmas {
+        padding: 20px;
+    }
+
+    .Reloj_Digital {
+        padding: 25px 15px;
+    }
+
+    .Reloj_Digital ul {
+        gap: 5px;
+    }
+}
+
+#listaAlarmas li.sonando {
+    background: #3B3F46;
+    border: 2px solid #5FB9B8;
+    animation: parpadear 0.8s infinite alternate;
+}
+
+#listaAlarmas li.sonando strong {
+    color: #F3FFFE;
+}
+
+@keyframes parpadear {
+    from {
+        background: #3B3F46;
+    }
+    to {
+        background: #5FB9B8;
+    }
+}
+
+.btn-detener {
+    background: #3B3F46;
+    color: #FFFFFF;
+}
+
+
+#formatoAlarma {
+    padding: 10px;
+    border: 1px solid #94D9D5;
+    border-radius: 6px;
+    background: #F3FFFE;
+    color: #3B3F46;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+#formatoAlarma:focus {
+    border-color: #5FB9B8;
+}
+
+#formatoAlarma option {
+    background: #F3FFFE;
+    color: #3B3F46;
+}
+
+#formatoAlarma + button {
+    margin-top: 10px;
+}
+
+/* Mantener ambos paneles alineados arriba */
+.Contenedor {
+    align-items: flex-start;
+}
+
+/* Limitar la altura de la lista */
+.lista-contenedor {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+/* Evitar que la lista se salga del panel */
+#listaAlarmas {
+    width: 100%;
+}
